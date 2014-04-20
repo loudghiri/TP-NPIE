@@ -1,0 +1,158 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>fr.miage</groupId>
+  <artifactId>Datatypes</artifactId>
+  <packaging>jar</packaging>
+  <version>1</version>
+  <name>Datatypes</name>
+  <url>http://maven.apache.org</url>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+</project>
+<reporting>
+<plugins>
+<plugin>
+<groupId>org.apache.maven.plugins</groupId>
+<artifactId>maven-pmd-plugin</artifactId>
+<version>2.3</version>
+<configuration>
+<linkXref>true</linkXref>
+<sourceEncoding>utf-8</sourceEncoding>
+<minimumTokens>100</minimumTokens>
+<targetJdk>1.5</targetJdk>
+<rulesets>
+<ruleset>/rulesets/sunsecure.xml</ruleset>
+<ruleset>/rulesets/naming.xml</ruleset>
+</rulesets>
+</configuration>
+</plugin>
+</plugins>
+</reporting>
+<build>
+<plugins>
+<plugin>
+<groupId>org.apache.maven.plugins</groupId>
+<artifactId>maven-site-plugin</artifactId>
+<version>3.0-beta-3</version>
+<configuration>
+<reportPlugins>
+<plugin>
+<groupId>org.apache.maven.plugins</groupId>
+<artifactId>maven-project-info-reports-plugin</artifactId>
+<version>2.0.1</version>
+</plugin>
+</reportPlugins>
+</configuration>
+</plugin>
+<plugin>
+<groupId>org.apache.maven.plugins</groupId>
+<artifactId>maven-javadoc-plugin</artifactId>
+<version>2.6</version>
+</plugin>
+<plugin>
+<groupId>org.apache.maven.plugins</groupId>
+<artifactId>maven-compiler-plugin</artifactId>
+<version>2.3.2</version>
+<configuration>
+<verbose>true</verbose>
+<source>1.6</source>
+<target>1.6</target>
+<showWarnings>true</showWarnings>
+</configuration>
+</plugin>
+<plugin>
+<groupId>org.apache.maven.plugins</groupId>
+<artifactId>maven-pmd-plugin</artifactId>
+<version>3.0.1</version>
+<configuration>
+<linkXRef>true</linkXRef>
+<rulesets>
+<rulset>rulesets/java/sunsecure.xml</rulset>
+<rulset>rulesets/java/naming.xml</rulset>
+<rulset>rulesets/java/braces.xml</rulset>
+<rulset>rulesets/java/coupling.xml</rulset>
+</rulesets>
+</configuration>
+</plugin>
+<plugin>
+<groupId>org.codehaus.mojo</groupId>
+<artifactId>cobertura-maven-plugin</artifactId>
+<configuration>
+<formats>
+<format>html</format>
+<format>xml</format>
+</formats>
+</configuration>
+</plugin>
+<plugin>
+<groupId>org.apache.maven.plugins</groupId>
+<artifactId>maven-checkstyle-plugin</artifactId>
+<version>2.3.2</version>
+<configuration>
+<configLocation>config/maven_checks.xml</configLocation>
+</configuration>
+</plugin>
+</plugins>
+</build>
+<developers>
+<developer>
+<id>LOUDGHIRI</id>
+<name>Loudghiri Ismail</name>
+<email>ismail.loudghiri@etu.univ-nantes.fr</email>
+<roles>
+<role>Developper</role>
+</roles>
+<timezone>1</timezone>
+</developer>
+<developer>
+<id>ALAMI</id>
+<name>Alami Sophia</name>
+<email>alami.sophia@etu.univ-nantes.fr</email>
+<roles>
+<role>Developper</role>
+</roles>
+<timezone>1</timezone>
+</developer>
+</developers>
+<licenses>
+<license>
+<name>GNU GPL V3</name>
+<url>http://www.gnu.org/licenses/gpl-3.0.html</url>
+<distribution>repo</distribution>
+<comments>Free</comments>
+</license>
+</licenses>
+<description>
+Datatypes is a project from MIAGE of Nantes. It is a convertor developped by Timothée DANE and Alex GUIFFAULT.
+</description>
+<organization>
+<name>University of Nantes</name>
+<url>http://www.univ-nantes.fr</url>
+</organization>
+<scm>
+<connection>https://github.com/Loudghiri/TP-NPIE</connection>
+<url>https://github.com/Loudghiri/TP-NPIE</url>
+<tag>HEAD</tag>
+</scm>
+<ciManagement>
+<system>Github</system>
+<url>https://github.com/Loudghiri/TP-NPIE</url>
+<notifiers>
+<notifier>
+<type>mail</type>
+<address>ismail.loudghiri@etu.univ-nantes.fr</address>
+<sendOnError>true</sendOnError>
+<sendOnFailure>true</sendOnFailure>
+<sendOnSuccess>false</sendOnSuccess>
+<sendOnWarning>false</sendOnWarning>
+</notifier>
+</notifiers>
+</ciManagement>
+</project>
